@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style type="text/css">
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizinig: border-box;
+}
+body{
+    
+font-family: Arial,sans -serif;
+display: grid;
+grid-template-areas:"sidebar main" "sidebar footer";
+grid-template-columns : 250px 1fr;
+grid-template-rows: 1fr auto;
+min-height: 100vh;
+
+
+}.sidebar {
+    gride-area : sidebar;
+    background: green;
+    color :black;
+    padding: 20px;
+    display: inline-block;
+    flex-direction: column;
+    justify-conttent : space-between;
+
+
+
+
+}
+.sidebar h2{
+    margin-bottom: 20px;
+}
+.sidebar nav a :hover {
+    background :#34495e;
+    
+
+}
+.sidebar nav a{
+    display: inline-block;
+
+}
+.main{
+grid-area: main;
+padding: 20px;
+background :black;
+display:flex;
+flex-direction: column;
+gap: 20px;
+}
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 9px rgb(0,0,0,0.1);
+
+}
+.footer {
+    grid-area : footer;
+    background: #34495e;
+    color: black;
+    text-align: center;
+    padding:10px;
+    display :flex;
+    justify-content:center;
+    align-items:center;
+}
+@media(max-width:760px){
+    body{
+    grid-template-areas:"sidebar"  "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    }
+    .sidebar {
+        flex-direction:row;
+        align-items: center;
+        justify-content: space-around;
+        display: inline;
+
+    }
+.sidebar nav a{
+    margin: 0 5px;
+}
+}
+    </style>
+    
+</head>
+<body><aside class="sidebar">
+<div>
+<h2>Dashboard</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#">Body</a>
+<a href="#">Contact</a>
+</nav>
+</div>
+<p>&copy; 2025</p>
+</aside>
+<main class="main">
+<div class="card">
+<h3>USERS</h3>
+<span> 1200</span>
+</div>
+<div class="card">
+<h3>sales</h3>
+<span>$4,500</span>
+</div>
+
+<div class="card">
+<h3>performance</h3>
+<span>86%</span>
+</div>
+</main>
+<footer class="footer">
+<p>Responsive Dashboard f\Footer</p>
+
+</footer></body>
+</html>
